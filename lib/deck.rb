@@ -17,8 +17,12 @@ class Deck
     @cards.shuffle!
   end
   
-  def give(player, num = 5)
-    player.hand = @cards.pop(num)
+  def deal(player)
+    player.hand = Hand.new(@cards.pop(5))
+  end
+  
+  def give(player, num)
+    player.hand += @cards.pop(num)
   end
   
   def plain_cards
@@ -26,4 +30,15 @@ class Deck
       [card.suit, card.value]
     end
   end
+  
+  def best_hand
+
+  end
+  
+  def beats?
+    
+  end
+  
 end
+
+

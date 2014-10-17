@@ -26,7 +26,8 @@ class Card
     :ace   => "A"
   }
 
-  BLACKJACK_VALUE = {
+  POKER_VALUE = {
+    :ace => 1, 
     :deuce => 2,
     :three => 3,
     :four  => 4,
@@ -36,12 +37,12 @@ class Card
     :eight => 8,
     :nine  => 9,
     :ten   => 10,
-    :jack  => 10,
-    :queen => 10,
-    :king  => 10
+    :jack  => 11,
+    :queen => 12,
+    :king  => 13
   }
   
-  def initialize(suit, value)
+  def initialize(value, suit)
     @suit, @value = suit, value
   end
   
